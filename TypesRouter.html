@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="F:\Par Site Project\css\Header.css">
+    <link rel="stylesheet" href="F:\Par Site Project\css\Footer.css">
+    <link rel="stylesheet" href="F:\Par Site Project\css\chef.css">
+    <link rel="stylesheet" href="F:\Par Site Project\css\bottooltip.css">
+    <link rel="stylesheet" href="F:\Par Site Project\css\extra.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+    </style>
+        
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="home">
+        </label><a href="index.html"><i class="fa fa-home"></i>Home</a></label>                     
+        <!-- </label><a href="link1.html"><i class="fa fa-tasks"></i>Topics</a></label> -->
+        </label><a href="link2.html"><i class="fa fa-file"></i>About</a></label>
+        </label><a href="practical1.html"><i class="fa fa-flask"></i>Practical</a></label>
+        </label><a href="refer.html"><i class="fa fa-calendar"></i>References</a></label>
+        </label><a href="Footer.html"><i class="fa fa-address-book"></i>Contact</a></label>
+    </label><a href="https://www.netacad.com/courses/packet-tracer"><i class="fa fa-download"></i>Download Cisco</a></label>
+        </nav>
+    </div>
+    <br>
+
+<a href="F:\Par Site Project\Images\network.jpg"><img class="web-img" src="F:\Par Site Project\Images\network.jpg" ></a>
+    <div class="row" style="width: 100%; padding-top: 20px ;">
+        <div class="column1">
+          <h2 >Other Links</h2>
+          <!-- <hr style="border: 2px solid;"> -->
+          
+          <nav class="link">
+            <a href="cisco.html"><input class="bttn" type="button" value="About Cisco"></a><br>
+               <a href="ipadd.html"><input class="bttn" type="button" value="IP Address"></a><br>
+               <a href="switch.html"><input class="bttn" type="button" value="Switch"></a><br>
+               <a href="nat.html"><input class="bttn" type="button" value="NAT"></a><br>     
+               <a href="routing.html"><input class="bttn" type="button" value="Router"></a><br>
+               <a href="TypesRouter.html"><input class="bttn" type="button" value="Types of Routing"></a><br>           
+               <a href="dora.html"><input class="bttn" type="button" value="Dora Process"></a><br>      
+               <a href="vlan.html"><input class="bttn" type="button" value="Vlan"></a><br>        
+               <a href="asl.html"><input class="bttn" type="button" value="Access Control "></a><br> 
+               <a href="linux.html"><input class="bttn" type="button" value="Kali Linux "></a><br> 
+               <a href="security.html"><input class="bttn" type="button" value="Network Security "></a><br>  
+               <a href="fire.html"><input class="bttn" type="button" value="ASA Firewall"></a><br>       
+        </nav>
+        </div>
+        <div class="column2" >
+            <h2>Types of routing :- </h2>
+        <p align="justify" class="para">
+            <img src="F:\Par Site Project\Images\static.png" class="imge"><br>
+        </p>
+        <h2>Static Routing</h2>
+        <p align="justify" class="para">
+            A static routing table is created, maintained, and updated by a network administrator, manually. A static route to every network must be configured on every router for full connectivity. This provides a granular level of control over routing, but quickly becomes impractical on large networks. Routers will not share static routes with each other, thus reducing CPU/RAM overhead and saving bandwidth. However, static routing is 
+            not fault-tolerant, as any change to the routing infrastructure (such as a link going down, or a new network added) requires manual intervention. Routers operating in a purely static environment cannot seamlessly choose a better route if a link becomes unavailable. Static routes have an Administrative Distance (AD) of 1, and thus are always preferred over dynamic routes, unless the default AD is changed. A static route with an adjusted 
+            AD is called a floating static route, and is covered in greater detail in another guide. 
+        </p>
+        <h2>Advantages of Static Routing </h2>
+        <p align="justify" class="para">
+            <ol class="lst" align="justify" style=" padding-left: 20px;">
+                <li>Minimal CPU/Memory overhead </li>
+                <li>No bandwidth overhead (updates are not shared between routers)</li>
+                <li>Granular control on how traffic is routed</li>
+        </ol>
+    </p>
+    <h2>Disadvantages of Static Routing</h2>
+        <ol class="lst" align="justify" style=" padding-left: 20px;">
+                <li>Infrastructure changes must be manually adjusted •</li>
+                <li>No “dynamic” fault tolerance if a link goes down </li>
+                <li>Impractical on large network</li>
+        </ol>
+    </p>
+        <h2>Dynamic Routing</h2>
+        <p align="justify" class="para">
+            A dynamic routing table is created, maintained, and updated by a routing protocol running on the router. Examples of routing protocols include RIP (Routing Information Protocol), EIGRP (Enhanced Interior Gateway Routing Protocol), and OSPF (Open Shortest Path First). Specific dynamic routing protocols are covered in great detail in other guides. Routers do share dynamic routing information with each other, which increases CPU, RAM, and bandwidth usage. However, routing protocols are capable of dynamically choosing a different (or better) path when there is a change to the routing infrastructure. Do not confuse routing protocols with routed protocols: • A routed protocol is a Layer 3 protocol that applies logical addresses to devices and routes data between networks (such as IP) • A routing protocol dynamically builds the network, topology, and next hop information in routing tables (such as RIP, EIGRP, etc.)
+        </p>
+        <h2>Advantages of Dynamic Routing </h2>
+        <p align="justify" class="para">
+            <ol class="lst" align="justify" style=" padding-left: 20px;">
+            <li>Simpler to configure on larger networks</li>
+            <li>Will dynamically choose a different (or better) route if a link goes down </li>
+            <li>Ability to load balance between multiple links</li>
+            </ol>
+        </p>
+        <h2>Disadvantages of Dynamic Routing</h2>
+        <p align="justify" class="para">
+            <ol class="lst" align="justify" style=" padding-left: 20px;">
+                <li>Updates are shared between routers, thus consuming bandwidth </li>
+                <li>Routing protocols put additional load on router CPU/RAM </li>
+                <li>The choice of the “best route” is in the hands of the routing protocol, and not the network administrator</li>
+        </ol>
+        </p>
+
+            <h2>RIP (Routing Information Protocol)</h2>
+            <p align="justify" class="para">
+                Unlike the other routing protocols, there are actually two different versions of RIP. The original RIP v1/2 protocol handles IPv4 routing. RIPng as the next generation, however, supports IPv6. Each is configured independently.
+                It is commonly assumed that RIP is no longer appropriate as a routing protocol, primarily due to its behavior of frequently sending the entire local forward database to all peers. However, there are still architectures where it is appropriate. It is particularly appropriate in architectures that require dynamic routing support but also a very fast convergence time. For example, consider a distributed IPSec hub-and-spoke topology that leverages dialup as well as redundant tunnel configurations.
+            </p>
+            <h2>OSPF (Open Shortest Path First)</h2>
+            <p align="justify" class="para">
+                The most common use of this routing protocol is to facilitate route updates within a single organization, often to support an IPsec-based distributed network. It is designed to support large distributed networks via “areas”. These areas are numbered with a dotted quad notation, much like IPv4 addresses. These areas are always connected to 0.0.0.0, which is commonly referred to as the backbone area.
+            </p>    
+            <h2>BGP (Border Gateway Protocol)</h2>
+            <p align="justify" class="para">
+                As the de facto routing protocol of the Internet, BGP has two common deployment models. When used for internal routing within a single administrative domain, BGP is also referred to as iBGP. When used to send routes outside of this domain it is commonly referred to as external BGP.
+                BGP provides extensive control over the propagation of network topology information… so much so that it is often viewed as overly complicated.
+                The BGP routing protocol uses a TCP connection to each peer to both transmit routing information and ensure the viability of the peer. This also means that there is a requirement for the administrators of each end of the connection to cooperate. It is not normally possible to establish a BGP peer by configuring the IP address of the peer on only one side of the connection.
+                While there is support for configuring BGP in the WebUI, this is really only sufficient to get the most basic BGP configuration up and running. You can define your local Autonomous System (AS), router ID, interfaces and networks to be propagated. More advanced configuration will require the CLI.
+                One of the original design requirements was that BGP be extensible. This is implemented via “capabilities”. There are a number of capabilities defined by various RFCs. The most commonly used are the “route-refresh” and “graceful-restart” capabilities. Capabilities are negotiated between the peers during the initial establishment of a BGP session and can be disabled or enabled on a per-neighbor basis. The graceful-restart capability can also be enabled/disabled globally.
+            </p>
+
+          </p>
+        </div>
+      </div>
+    <div class="nxt">
+      <!-- buttons used -->
+      <a href="routing.html"><input class="button" type="button" value="Previous"></a>
+      <a href="dora.html"><input class="button" type="button" value="Next"></a>
+    </div>
+      <div class="tooltip">
+        <a href="F:\Par Site Project\Images\bot.gif">
+            <img class="size_of_img" src="F:\Par Site Project\Images\bot.gif" alt="Image 1" />
+            <span class="tooltiptext"></span>
+        </a>
+    </div>
+      
+       <!-- Footer Code -->
+
+    
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+      <a href="F:\Par Site Project\Images\pslogo.jpg"><img src="F:\Par Site Project\Images\pslogo.jpg"></a>
+            <h3>About<span> Paraminder Website</span></h3>
+
+            <p class="footer-links">
+               <a href="index.html">Home</a>
+               |
+               <a href="cisco.html">About</a>
+               |
+               <a href="Footer.html">Contact</a>
+           </p>
+
+            <p class="footer-company-name">© 2021</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                  <p><span> 
+                     </span>
+                    Jalandhar, Punjab - 144021</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p> </p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:">pamansingh07@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About my skills</span>
+                    Positive attitude, Communication skills, Time management, Self confidence.</p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+   </body>
+   </html>

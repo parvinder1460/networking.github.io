@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="F:\Par Site Project\css\Header.css">
+    <link rel="stylesheet" href="F:\Par Site Project\css\Footer.css">
+    <link rel="stylesheet" href="F:\Par Site Project\css\chef.css">
+    <link rel="stylesheet" href="F:\Par Site Project\css\bottooltip.css">
+    <link rel="stylesheet" href="F:\Par Site Project\css\extra.css">
+    <link rel="stylesheet" href="F:\Par Site Project\css\glow.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+    </style>
+        
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="home">
+        </label><a href="index.html"><i class="fa fa-home"></i>Home</a></label>                    
+        </label><a href="link2.html"><i class="fa fa-file"></i>About</a></label>
+        </label><a href="practical1.html"><i class="fa fa-flask"></i>Practical</a></label>
+        </label><a href="refer.html"><i class="fa fa-calendar"></i>References</a></label>
+        </label><a href="Footer.html"><i class="fa fa-address-book"></i>Contact</a></label>
+    </label><a href="https://www.netacad.com/courses/packet-tracer"><i class="fa fa-download"></i>Download Cisco</a></label>
+        </nav>
+    </div>
+    <br>
+    <a href="F:\Par Site Project\Images\fire.jpg"><img class="web-img" src="F:\Par Site Project\Images\fire.jpg" ></a>
+    <div class="row" style="width: 100%; padding-top: 20px ;">
+        <div class="column1">
+          <h2 >Other Links</h2>
+          <!-- <hr style="border: 2px solid;"> -->
+          
+          <nav class="link">
+            <a href="cisco.html"><input class="bttn" type="button" value="About Cisco"></a><br>
+               <a href="ipadd.html"><input class="bttn" type="button" value="IP Address"></a><br>
+               <a href="switch.html"><input class="bttn" type="button" value="Switch"></a><br>
+               <a href="nat.html"><input class="bttn" type="button" value="NAT"></a><br>     
+               <a href="routing.html"><input class="bttn" type="button" value="Router"></a><br>
+               <a href="TypesRouter.html"><input class="bttn" type="button" value="Types of Routing"></a><br>           
+               <a href="dora.html"><input class="bttn" type="button" value="Dora Process"></a><br>      
+               <a href="vlan.html"><input class="bttn" type="button" value="Vlan"></a><br>        
+               <a href="asl.html"><input class="bttn" type="button" value="Access Control "></a><br> 
+               <a href="linux.html"><input class="bttn" type="button" value="Kali Linux "></a><br>    
+               <a href="security.html"><input class="bttn" type="button" value="Network Security "></a><br>     
+               <a href="fire.html"><input class="bttn" type="button" value="ASA Firewall"></a><br> 
+        </nav>
+        </div>
+        <div class="column2" >
+            <h2>Implementing ASA Firewall:</h2>
+            <p align="justify" class="para">
+                The Cisco ASA 5505 Firewall is the smallest model in the new 5500 Cisco series of hardware appliances. Although this model is suitable for small businesses, branch offices or even home use, its firewall security capabilities are the same as the biggest models (5510, 5520, 5540 etc). The Adaptive Security technology of the ASA firewalls offers solid and reliable firewall protection, advanced application-aware security, denial of service attack protection and much more. Moreover, the performance of the ASA 5505 appliance supports 150Mbps firewall throughput and 4000 firewall connections per second, which is more than enough for small networks. In this article, I will explain the basic Cisco ASA 5505 configuration for connecting a small network to the Internet (here the complete guides).
+                We assume that our ISP has assigned us a static public IP address (e.g 200.200.200.1 as an example) and that our internal network range is 192.168.1.0/24. We will use Port Address Translation (PAT) to translate our internal IP addresses to the public address of the outside interface. The difference of the 5505 model from the bigger ASA models is that it has an 8-port 10/100 switch which acts as Layer 2 only. That is, you can not configure the physical ports as Layer 3 ports, rather you have to create interface VLANs and assign the Layer 2 interfaces in each VLAN. By default, interface Ethernet0/0 is assigned to VLAN 2 and it’s the outside interface (the one which connects to the Internet), and the other 7 interfaces (Ethernet0/1 to 0/7) are assigned by default to VLAN 1 and are used for connecting to the internal network. Let’s see the basic configuration setup of the most important steps that you need to configure.
+                Cisco ASA 5505 configuration
+                Let’s now have a look at the Cisco ASA 5505 configuration, in a step by step fashion.
+            </p>
+            <h2> can’t assign IP directly to any interface of a firewall.</h2>
+            <p align="justify" class="para">
+                <ol class="lst" align="justify">
+                    <li>We have to assign IP to VLAN & then link VLAN to any interface so IP ets indirectly assigned to interface.</li>
+                    <li>INSIDE network is inside your LAN.</li>
+                    <li>OUTSIDE network will be out of LAN.</li>
+                    <li>VLAN 1 will always be linked with INSIDE network.</li>
+                    <li>VLAN 2 will always be linked with OUTSIDE network.</li>
+                    <li>SECURITY LEVEL of INSIDE network will be 100 & OUTSIDE will be 0.</li>
+                    <li>Ethernet 0/1 of firewall will be assigned to VLAN1.</li>
+                    <li>Ethernet 0/0 of firewall will be assigned to VLAN2.</li>
+                 </ol>
+        </p>
+            <h2> Configure the internal interface vlan</h2>
+            <p align="justify" class="para">
+                <img src="F:\Par Site Project\Images\firewallp.jpg" class="imge">
+                ASA5505(config)# interface Vlan 1<br>
+                ASA5505(config-if)# nameif inside<br>
+                ASA5505(config-if)# security-level 100<br>
+                ASA5505(config-if)# ip address 192.168.1.1 255.255.255.0<br>
+                ASA5505(config-if)# no shut<br>
+            </p>
+            <h2> 2: Configure the external interface vlan (connected to Internet)</h2>
+            <p align="justify" class="para">
+                ASA5505(config)# interface Vlan 2<br>
+                ASA5505(config-if)# nameif outside<br>
+                ASA5505(config-if)# security-level 0<br>
+                ASA5505(config-if)# ip address 200.200.200.1 255.255.255.0<br>
+                ASA5505(config-if)# no shut<br>
+            </p>
+            <h2> 3: Assign Ethernet 0/0 to Vlan 2</h2>
+            <p align="justify" class="para">
+                ASA5505(config)# interface Ethernet0/0<br>
+                ASA5505(config-if)# switchport access vlan 2<br>
+                ASA5505(config-if)# no shut<br>
+            </p>
+            <h2> 4: Enable the rest interfaces with no shut</h2>
+            <p align="justify" class="para">
+            
+                ASA5505(config)# interface Ethernet0/1<br>
+                ASA5505(config-if)# no shut<br>
+        </p>
+        </div>
+      <div class="nxt">
+
+      
+      <a href="security.html"><input class="button" type="button" value="Previous"></a>
+      <!-- <a href="nat.html"><input class="button" type="button" value="Next"></a> -->
+    </div>
+      <div class="tooltip">
+        <a href="bot.gif">
+            <img class="size_of_img" src="F:\Par Site Project\Images\bot.gif" alt="Image 1" />
+            <span class="tooltiptext">grewon.pdf</span>
+        </a>
+    </div>
+       <!-- Footer Code -->
+
+    
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+      <a href="F:\Par Site Project\Images\pslogo.jpg"><img src="F:\Par Site Project\Images\pslogo.jpg"></a>
+            <h3>About<span> Paraminder Website</span></h3>
+
+            <p class="footer-links">
+               <a href="index.html">Home</a>
+               |
+               <a href="cisco.html">About</a>
+               |
+               <a href="Footer.html">Contact</a>
+           </p>
+
+            <p class="footer-company-name">© 2021</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                  <p><span> 
+                     </span>
+                    Jalandhar, Punjab - 144021</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p> </p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:">pamansingh07@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About my skills</span>
+                    Positive attitude, Communication skills, Time management, Self confidence.</p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+   </body>
+   </html>
+
