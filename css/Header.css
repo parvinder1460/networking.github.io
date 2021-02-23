@@ -70,10 +70,20 @@ html,body{
     
 }
 .nxt{
-    margin-left: 16%;
+    /* margin-left: 18%; */
 }
  
 .button:hover{
     color: red;
 }
 
+
+/* #acl.bttn
+ {
+    color:  red;
+    background-color: lightgreen;
+ } */
+/* , #cisco, #dora, #fire, #ip, #linux, #nat, #router, #types, #vlan{
+    background-color: yellow;
+    color: white;
+} */
