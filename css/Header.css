@@ -41,8 +41,19 @@ html,body{
 }
 
 .wrapper nav a i{
-    font-size: 25px;
+    font-size: 30px;
     margin: 0 7px;
+    transition: 2s;
+}
+ 
+.wrapper .home .icon:hover, .team-item .social-icon .icon:hover{
+    
+    /* color: pink; */
+    transition: 2s;
+    transform: rotate(360deg);
+}
+.team-item .social-icon .icon{
+    transition: 1s;
 }
 
 .wrapper nav a:hover,.wrapper nav i:hover{
@@ -86,7 +97,10 @@ html,body{
 /* For 1st Column */
 .column1 {
     float: left;
-    width: 19%;                  
+    width: 19%; 
+    max-width: 19%;  
+    min-width: 5%;
+    /* overflow: auto;                */
     /* height: 700px; */
     padding: 5px;
     margin-left: 4%;
@@ -202,8 +216,11 @@ html,body{
 }
 .lst{
     width: 90%;
+    max-width: 50%;
+    min-width: none;
     font-family: calibri;
     font-size: 20px;
+    overflow: auto;
     margin-left:8% ;
     padding-right: 17px;
     list-style: inside;
