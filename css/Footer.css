@@ -111,14 +111,14 @@ footer{
 	line-height: 38px;
 }
 
-.footer-center .icon ,.footer-icons .icon{
+/* .footer-center .icon ,.footer-icons .icon{
     transition: 2s;    
 }
 
 .footer-center .icon:hover, .footer-icons .icon:hover{
     transition: 2s;
     transform: rotate(360deg); 
-}
+} */
 
 .footer-distributed .footer-center p{
 	display: inline-block;
