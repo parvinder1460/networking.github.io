@@ -215,6 +215,7 @@ html,body{
 }
 .lst{
     width: 90%;
+    max-width: 90%;
     font-family: calibri;
     font-size: 20px;
     /* overflow: auto; */
