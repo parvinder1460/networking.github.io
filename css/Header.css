@@ -215,11 +215,9 @@ html,body{
 }
 .lst{
     width: 90%;
-    max-width: 50%;
-    min-width: none;
     font-family: calibri;
     font-size: 20px;
-    overflow: auto;
+    /* overflow: auto; */
     margin-left:8% ;
     padding-right: 17px;
     list-style: inside;
