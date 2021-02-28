@@ -47,7 +47,6 @@ html,body{
 }
  
 .wrapper .home .icon:hover, .team-item .social-icon .icon:hover{
-    
     /* color: pink; */
     transition: 2s;
     transform: rotate(360deg);
@@ -60,7 +59,6 @@ html,body{
     background-color: grey;
     /* color: red; */
 }
-
 
 .web-img{
     width: 92%;
